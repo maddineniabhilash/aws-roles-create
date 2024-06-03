@@ -1,5 +1,5 @@
 resource "aws_iam_role" "apim_role" {
-  name                 = format("%s_%s_apim-dev", var.account_name, var.environment)
+  name                 = format("%s_%s_apim_dev", var.account_name, var.environment)
   description          = "APIM Role for APIs deployment"
   assume_role_policy   = data.aws_iam_policy_document.apim_role_trust_relationship.json
   max_session_duration = 28800
